@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Market</string>
+    <string name="title_activity_home">Market</string>
+    <string name="title_home">الرئيسية</string>
+    <string name="title_Cart">سلة المشتريات</string>
+    <string name="title_Account">حسابي</string>
+    <string name="title_Setting">إعدادات</string>
+    <string name="country">بلد المنشأ:</string>
+    <string name="weight">الوزن:</string>
+    <string name="price">السعر:</string>
+    <string name="offers">العروض</string>
+    <string name="fruits">الفواكه</string>
+    <string name="leafy"> الورقيات </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="have_account">لديك حساب؟</string>
+    <string name="email">  *البريد الالكتروني / رقم الهاتف</string>
+    <string name="password"> كلمة السر*</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="forgotPassword">نسيت كلمة السر</string>
+    <string name="create_account">انشاء حساب</string>
+    <string name="continueWithGoogle">إستمرار عبر جوجل</string>
+    <string name="continue_with_facebook">استمرار عبر فيسبوك</string>
+    <string name="first_name">* الاسم الاول</string>
+    <string name="last_name"> * اسم العائلة</string>
+    <string name="Email">البريد الالكتروني</string>
+    <string name="date_of_birth">تاريخ الميلاد</string>
+    <string name="phone_num"> رقم الهاتف *</string>
+    <string name="female">انثى</string>
+    <string name="male">ذكر</string>
+    <string name="mandatory_items">* يجب ادخال المعلومات في هذه الخانات</string>
+    <string name="next">التالي</string>
+    <string name="new_account">حساب جديد</string>
+    <string name="vegetables">الخضروات</string>
+
+</resources>

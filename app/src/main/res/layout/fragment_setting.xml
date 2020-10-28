@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.settings.SettingFragment">
+
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="match_parent"
+     android:padding="10dp"
+     android:layout_height="match_parent">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView_alarms"
+    android:layout_width="match_parent"
+    android:background="@drawable/raduis_border"
+    app:layout_constraintTop_toTopOf="parent"
+    app:cardCornerRadius="10dp"
+   app:cardBackgroundColor="#F7F7F7"
+    app:cardElevation="5dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+
+        android:background="@drawable/raduis_border"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_alarms_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ضبط التنبيهات"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_alarms"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_alarms"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_alarm_setting"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+     <com.github.siyamed.shapeimageview.RoundedImageView
+         android:id="@+id/iv_payment_card"
+         android:layout_width="120dp"
+         android:layout_height="120dp"
+         android:layout_marginEnd="16dp"
+         app:siBorderWidth="2dp"
+         app:siBorderColor="@color/colorPrimary"
+         app:siRadius="1dp"
+         android:layout_marginTop="28dp"
+         android:src="@drawable/image_not_found"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/cardView_alarms" />
+
+
+     <com.github.siyamed.shapeimageview.RoundedImageView
+         android:id="@+id/iv_inbox"
+         android:layout_width="120dp"
+         app:siBorderWidth="2dp"
+         app:siBorderColor="@color/colorPrimary"
+         app:siRadius="1dp"
+         android:layout_height="120dp"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="28dp"
+         android:src="@drawable/image_not_found"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/cardView_alarms" />
+     <com.github.siyamed.shapeimageview.RoundedImageView
+         android:id="@+id/iv_share"
+         android:layout_width="120dp"
+         android:layout_height="120dp"
+         android:layout_marginEnd="16dp"
+         android:layout_marginTop="28dp"
+         android:src="@drawable/image_not_found"
+         app:siBorderWidth="2dp"
+         app:siBorderColor="@color/colorPrimary"
+         app:siRadius="1dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/iv_payment_card" />
+     <com.github.siyamed.shapeimageview.RoundedImageView
+         android:id="@+id/iv_notes"
+         android:layout_width="120dp"
+         android:layout_height="120dp"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="28dp"
+         android:src="@drawable/image_not_found"
+         app:siBorderWidth="2dp"
+         app:siBorderColor="@color/colorPrimary"
+         app:siRadius="1dp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/iv_inbox" />
+
+     <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         app:cardCornerRadius="10dp"
+         app:cardElevation="5dp"
+         android:id="@+id/card_social"
+         app:layout_constraintTop_toBottomOf="@id/iv_notes"
+         app:layout_constraintStart_toStartOf="parent"
+         android:layout_marginTop="20dp"
+         app:cardBackgroundColor="#F7F7F7"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:layout_height="wrap_content">
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:padding="10dp"
+             android:background="@drawable/raduis_border"
+
+             android:layout_height="match_parent">
+
+
+             <ImageView
+                 android:id="@+id/youtube_icon"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="28dp"
+                 android:src="@drawable/ic_youtube"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+
+             <ImageView
+                 android:id="@+id/facebook_icon"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="60dp"
+                 android:src="@drawable/ic_facebook"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toEndOf="@id/youtube_icon"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+
+             <ImageView
+                 android:id="@+id/insta_icon"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+android:layout_marginEnd="30dp"
+                 android:layout_marginStart="30dp"
+                 android:src="@drawable/ic_instagram"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toStartOf="@+id/twitter_icon"
+                 app:layout_constraintStart_toEndOf="@id/facebook_icon"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <ImageView
+                 android:id="@+id/twitter_icon"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="28dp"
+                 android:src="@drawable/ic_twitter"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+     </androidx.cardview.widget.CardView>
+
+     <com.github.siyamed.shapeimageview.RoundedImageView
+         android:id="@+id/iv_terms"
+         android:layout_width="120dp"
+         android:layout_height="120dp"
+         android:layout_marginEnd="16dp"
+         app:siBorderWidth="2dp"
+         app:siBorderColor="@color/colorPrimary"
+         app:siRadius="6dp"
+         android:layout_marginTop="28dp"
+         app:layout_constraintTop_toBottomOf="@id/card_social"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:src="@drawable/image_not_found"/>
+
+     <com.github.siyamed.shapeimageview.RoundedImageView
+         android:id="@+id/iv_language"
+         android:layout_width="120dp"
+         android:layout_height="120dp"
+         android:layout_marginStart="16dp"
+         app:siBorderWidth="2dp"
+         app:siBorderColor="@color/colorPrimary"
+         app:siRadius="1dp"
+         android:layout_marginTop="28dp"
+         app:layout_constraintTop_toBottomOf="@id/card_social"
+         app:layout_constraintStart_toStartOf="parent"
+         android:src="@drawable/image_not_found"/>
+
+     <com.github.siyamed.shapeimageview.RoundedImageView
+         android:id="@+id/iv_developed_by"
+         android:layout_width="120dp"
+         android:layout_height="120dp"
+         app:siBorderWidth="2dp"
+         app:siBorderColor="@color/colorPrimary"
+         app:siRadius="1dp"
+         android:layout_marginEnd="16dp"
+         android:layout_marginTop="28dp"
+         app:layout_constraintTop_toBottomOf="@id/iv_terms"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:src="@drawable/image_not_found"/>
+     <com.github.siyamed.shapeimageview.RoundedImageView
+         android:id="@+id/iv_about_us"
+         android:layout_width="120dp"
+         android:layout_height="120dp"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="28dp"
+         app:siBorderWidth="2dp"
+         app:siBorderColor="@color/colorPrimary"
+         app:siRadius="1dp"
+         app:layout_constraintTop_toBottomOf="@id/iv_language"
+         app:layout_constraintStart_toStartOf="parent"
+         android:src="@drawable/image_not_found"/>
+ </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

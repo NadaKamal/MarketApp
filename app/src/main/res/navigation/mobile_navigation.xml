@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.market.ui.home.HomeFragment"
+        android:label="@string/title_home"
+
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_vegetablesFragment"
+            app:destination="@id/vegetablesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.market.ui.cart.CartFragment"
+        android:label="@string/title_Cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_navigation_cart_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.market.ui.account.AccountFragment"
+        android:label="@string/title_Account"
+        tools:layout="@layout/fragment_account" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.example.market.ui.settings.SettingFragment"
+        android:label="@string/title_Setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.market.ui.LoginFragment"
+        android:label="@string/login"
+
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.market.HomeActivity"
+        android:label="HomeActivity" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.market.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.market.ui.SignUpFragment"
+        android:label="@string/new_account"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/vegetablesFragment"
+        android:name="com.example.market.ui.VegetablesFragment"
+        android:label="@string/vegetables" />
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.example.market.ui.categories.CategoryFragment"
+        android:label="OffersFragment" >
+        <action
+            android:id="@+id/action_offersFragment_to_vegetablesFragment"
+            app:destination="@id/vegetablesFragment" />
+    </fragment>
+</navigation>

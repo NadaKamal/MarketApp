@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/cardview_bg"
+            android:padding="20dp"
+            android:layout_height="match_parent">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/item_img"
+                app:siBorderWidth="5dp"
+                app:siBorderColor="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/cardview_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_item_name"
+                android:text="Item"
+                app:layout_constraintTop_toBottomOf="@id/item_img"
+                app:layout_constraintStart_toStartOf="@id/item_img"
+                app:layout_constraintEnd_toEndOf="@id/item_img"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
