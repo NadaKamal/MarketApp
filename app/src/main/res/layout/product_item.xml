@@ -100,11 +100,12 @@
 
         <LinearLayout
             android:layout_marginTop="5dp"
-            android:id="@+id/btn_view"
+            android:id="@+id/btn_add_to_cart"
             android:layout_width="0dp"
             app:layout_constraintStart_toStartOf="@id/tv_price"
             app:layout_constraintEnd_toEndOf="parent"
             android:clickable="true"
+            android:visibility="visible"
             app:layout_constraintTop_toBottomOf="@id/price_txt"
             android:background="@drawable/btn_bg"
             android:padding="4dp"
@@ -127,5 +128,57 @@
                 android:src="@drawable/ic_white_cart"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:id="@+id/tv_item_count"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/btn_add"
+            app:layout_constraintEnd_toEndOf="@id/btn_remove"
+            app:layout_constraintTop_toBottomOf="@id/price_txt"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_add_circle_24"
+            app:layout_constraintStart_toEndOf="@id/iv_category_img"
+android:id="@+id/btn_add"
+            android:visibility="gone"
+
+            app:layout_constraintEnd_toStartOf="@id/tv_item_count"
+            app:layout_constraintTop_toTopOf="@id/tv_item_count"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_count"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/btn_remove"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+
+            android:src="@drawable/ic_baseline_remove_circle_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_item_count"
+            app:layout_constraintTop_toTopOf="@id/tv_item_count"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_count"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_dn"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_bg"
+            android:text="تم"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_add"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/iv_category_img"
+            app:layout_constraintStart_toStartOf="@id/iv_category_img"
+            app:layout_constraintTop_toTopOf="@+id/btn_add" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

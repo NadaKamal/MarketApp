@@ -28,6 +28,8 @@
             android:searchIcon="@drawable/ic_baseline_search_24"
             android:background="@drawable/raduis_border"
             android:queryHint="البحث"
+            android:focusableInTouchMode="true"
+            android:focusedByDefault="false"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_height="wrap_content"/>
 

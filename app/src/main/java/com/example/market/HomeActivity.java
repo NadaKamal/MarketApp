@@ -28,17 +28,11 @@ public class HomeActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home);
         setSupportActionBar(binding.toolBar.toolBar1);
-
-
-
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_cart, R.id.navigation_account,R.id.navigation_setting)
                 .build();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-
         NavigationUI.setupWithNavController(binding.navView, navController);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.toolBar.toolBar1,navController,appBarConfiguration);

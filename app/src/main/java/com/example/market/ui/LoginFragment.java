@@ -1,5 +1,6 @@
 package com.example.market.ui;
 
+import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,8 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 
 import com.example.market.R;
 import com.example.market.databinding.FragmentLoginBinding;
@@ -21,7 +24,7 @@ import com.example.market.databinding.FragmentLoginBinding;
  */
 public class LoginFragment extends Fragment {
 
-   FragmentLoginBinding binding;
+    FragmentLoginBinding binding;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -42,7 +45,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentLoginBinding.inflate(inflater,container,false);
+        binding = FragmentLoginBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
         return view;
     }
@@ -56,5 +59,29 @@ public class LoginFragment extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_signUpFragment);
             }
         });
+
+        binding.tvForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAlertDialog();
+            }
+        });
+    }
+
+    private void showAlertDialog() {
+
+        final Dialog dialog = new Dialog(getActivity(), R.style.CustomAlertDialog);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.forgot_password_dialog);
+        Button btn = dialog.findViewById(R.id.btn_confirm);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dialog.hide();
+            }
+        });
+        dialog.show();
+
     }
 }

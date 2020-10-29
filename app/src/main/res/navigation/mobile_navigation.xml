@@ -63,7 +63,11 @@
         android:id="@+id/signUpFragment"
         android:name="com.example.market.ui.SignUpFragment"
         android:label="@string/new_account"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+    </fragment>
     <fragment
         android:id="@+id/vegetablesFragment"
         android:name="com.example.market.ui.VegetablesFragment"
@@ -76,4 +80,9 @@
             android:id="@+id/action_offersFragment_to_vegetablesFragment"
             app:destination="@id/vegetablesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.market.ui.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" />
 </navigation>

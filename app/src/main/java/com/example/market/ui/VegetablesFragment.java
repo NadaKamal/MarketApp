@@ -27,7 +27,6 @@ public class VegetablesFragment extends Fragment implements  ProductsAdapter.onC
     FragmentVegetablesBinding binding;
     ProductsAdapter adapter;
     ArrayList<ProductsModel> products = new ArrayList<>();
-
     public VegetablesFragment() {
         // Required empty public constructor
     }

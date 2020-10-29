@@ -34,5 +34,16 @@
     <string name="next">التالي</string>
     <string name="new_account">حساب جديد</string>
     <string name="vegetables">الخضروات</string>
+    <string name="governorate">المحافظة</string>
+    <string name="reigon">المنطقة</string>
+    <string name="neighborhood">الحي</string>
+    <string name="street">الشارع</string>
+    <string name="building_num">رقم المبنى</string>
+    <string name="floor">الطابق</string>
+    <string name="flat_number">رقم الشقة</string>
+    <string name="sign_up">تسجيل</string>
+    <string name="forgot_pass">نسيت كلمة السر</string>
+    <string name="confirm">تأكيد</string>
+    <string name="cancel">الغاء</string>
 
 </resources>
