@@ -1,22 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.cart.CartFragment">
+    android:padding="10dp"
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:context=".ui.cart.CartFragment">
+
+        <ir.neo.stepbarview.StepBarView
+            android:id="@+id/Step_Bar"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:sbv_max_count="3"
+            app:sbv_steps_reached_colors="@color/colorPrimaryDark"
+            app:sbv_steps_line_reached_colors="@color/colorPrimaryDark"
+            app:sbv_show_step_index="false"
+            app:sbv_steps_size="20dp"
+            app:sbv_steps_stroke_size="20dp"
+            app:sbv_steps_line_margin_right="0dp"
+            android:layout_marginTop="20dp"
+            app:sbv_steps_line_margin_left="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:sbv_steps_unreached_colors="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+
+      <FrameLayout
+          android:id="@+id/cart_container_fragment"
+          android:layout_marginTop="10dp"
+          android:layout_width="match_parent"
+          app:layout_constraintTop_toBottomOf="@id/Step_Bar"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_height="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+</layout>

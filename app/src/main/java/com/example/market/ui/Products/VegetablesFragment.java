@@ -1,4 +1,4 @@
-package com.example.market.ui;
+package com.example.market.ui.Products;
 
 import android.os.Bundle;
 
@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.example.market.Adapters.ProductsAdapter;
 import com.example.market.Model.ProductsModel;
-import com.example.market.R;
 import com.example.market.databinding.FragmentVegetablesBinding;
 
 import java.util.ArrayList;
@@ -55,6 +54,7 @@ public class VegetablesFragment extends Fragment implements  ProductsAdapter.onC
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        products.clear();
         products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
         products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
         products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
@@ -62,7 +62,7 @@ public class VegetablesFragment extends Fragment implements  ProductsAdapter.onC
         products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
         products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
         products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
-
+        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
         adapter = new ProductsAdapter(products, this, getActivity());
         binding.recyclerVegetables.setAdapter(adapter);
     }

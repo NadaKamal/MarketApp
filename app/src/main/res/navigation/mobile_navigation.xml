@@ -31,9 +31,9 @@
 
     <fragment
         android:id="@+id/navigation_account"
-        android:name="com.example.market.ui.account.AccountFragment"
-        android:label="@string/title_Account"
-        tools:layout="@layout/fragment_account" >
+        android:name="com.example.market.ui.orders.OrdersFragment"
+        android:label="@string/title_my_orders"
+        tools:layout="@layout/fragment_my_orders" >
 
     </fragment>
     <fragment
@@ -70,8 +70,13 @@
     </fragment>
     <fragment
         android:id="@+id/vegetablesFragment"
-        android:name="com.example.market.ui.VegetablesFragment"
-        android:label="@string/vegetables" />
+        android:name="com.example.market.ui.Products.VegetablesFragment"
+        android:label="@string/vegetables" >
+
+        <action
+            android:id="@+id/action_vegetablesFragment_to_productDetailsFragment2"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/offersFragment"
         android:name="com.example.market.ui.categories.CategoryFragment"
@@ -85,4 +90,9 @@
         android:name="com.example.market.ui.AddressFragment"
         android:label="fragment_address"
         tools:layout="@layout/fragment_address" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.market.ui.Products.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
 </navigation>

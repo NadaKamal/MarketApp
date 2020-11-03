@@ -56,16 +56,11 @@ public class CategoryFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         CategoriesAdapter adapter = new CategoriesAdapter(CategoriesArrayList,getContext());
+        CategoriesArrayList.clear();
         CategoriesArrayList.add(new CategoriesModel("", "Category"));
         CategoriesArrayList.add(new CategoriesModel("", "Category"));
         CategoriesArrayList.add(new CategoriesModel("", "Category"));
-        CategoriesArrayList.add(new CategoriesModel("", "Category"));
-        CategoriesArrayList.add(new CategoriesModel("", "Category"));
-        CategoriesArrayList.add(new CategoriesModel("", "Category"));
-        CategoriesArrayList.add(new CategoriesModel("", "Category"));
-        CategoriesArrayList.add(new CategoriesModel("", "Category"));
-        CategoriesArrayList.add(new CategoriesModel("", "Category"));
-        CategoriesArrayList.add(new CategoriesModel("", "Category"));
+
 
         binding.recyclerOffers.setAdapter(adapter);
 

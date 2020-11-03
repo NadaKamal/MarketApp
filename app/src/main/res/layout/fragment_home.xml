@@ -24,10 +24,11 @@
             android:textAlignment="center"
             android:outlineSpotShadowColor="@color/colorPrimary"
             android:outlineAmbientShadowColor="@color/colorPrimary"
-            android:iconifiedByDefault="false"
+            android:iconifiedByDefault="true"
+
             android:searchIcon="@drawable/ic_baseline_search_24"
             android:background="@drawable/raduis_border"
-            android:queryHint="البحث"
+            android:queryHint="@string/search"
             android:focusableInTouchMode="true"
             android:focusedByDefault="false"
             app:layout_constraintEnd_toEndOf="parent"

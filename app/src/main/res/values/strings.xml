@@ -3,9 +3,9 @@
     <string name="title_activity_home">Market</string>
     <string name="title_home">الرئيسية</string>
     <string name="title_Cart">سلة المشتريات</string>
-    <string name="title_Account">حسابي</string>
+    <string name="title_my_orders">طلباتي</string>
     <string name="title_Setting">إعدادات</string>
-    <string name="country">بلد المنشأ:</string>
+    <string name="origin">بلد المنشأ:</string>
     <string name="weight">الوزن:</string>
     <string name="price">السعر:</string>
     <string name="offers">العروض</string>
@@ -45,5 +45,34 @@
     <string name="forgot_pass">نسيت كلمة السر</string>
     <string name="confirm">تأكيد</string>
     <string name="cancel">الغاء</string>
+    <string name="done">تم</string>
+    <string name="count_item">0</string>
+    <string name="add_to_cart">أضف الى السلة</string>
+    <string name="country">البلد</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="view_all">عرض الكل</string>
+    <string name="total_order">حاصل المجموع:</string>
+    <string name="delivery_charge">رسوم التوصيل</string>
+    <string name="_20_50">20.50</string>
+    <string name="total">المجموع :</string>
+    <string name="general_notes">ملاحظات عامة:</string>
+    <string name="notes">ملاحظات</string>
+    <string name="continue_shopping">مواصلة التسوق</string>
+    <string name="address_to_deliver">عنوان التوصيل</string>
+    <string name="add_new">إضافة جديد</string>
+    <string name="back">رجوع</string>
+    <string name="promo">كود الخصم</string>
+    <string name="confrim">تفعيل الكود</string>
+    <string name="confirm_order">اتمام الطلب</string>
+    <string name="edit">تعديل</string>
+    <string name="search">البحث</string>
+    <string name="edit_profile">تعديل الحساب</string>
+    <string name="my_addresses">عناويني</string>
+    <string name="notification">الاشعارات</string>
+    <string name="lang">اللغة</string>
+    <string name="about">حول</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="order">الطلب 230#</string>
+    <string name="delivery">التوصيل:</string>
 
 </resources>

@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.market.ui.categories.CategoryFragment;
-import com.example.market.ui.VegetablesFragment;
+import com.example.market.ui.Products.VegetablesFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 

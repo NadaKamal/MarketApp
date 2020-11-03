@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/raduis_border"
+                android:elevation="20dp">
+
+
+                <ImageView
+                    android:id="@+id/item_image"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/corner_image"
+                    android:padding="-10dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/image_not_found"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/cairo_semibold"
+                    android:text="@string/product_name"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/item_image"
+                    app:layout_constraintTop_toTopOf="@id/item_image"
+                    app:layout_constraintVertical_bias="0.287" />
+
+                <TextView
+                    android:id="@+id/origin_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/country"
+                    app:layout_constraintStart_toStartOf="@id/tv_product_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_product_name" />
+
+
+                <TextView
+                    android:id="@+id/weight_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="250gm"
+                    app:layout_constraintStart_toStartOf="@id/origin_txt"
+                    app:layout_constraintTop_toBottomOf="@id/origin_txt" />
+
+
+                <TextView
+                    android:id="@+id/price_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="20 EGP"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintStart_toStartOf="@id/tv_product_name"
+
+                    app:layout_constraintTop_toBottomOf="@id/weight_txt" />
+
+                <View
+                    android:id="@+id/view_count"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintWidth_percent=".1"
+                    android:layout_width="0dp"
+                    android:background="@drawable/view"
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/tv_plus"
+                    android:textAlignment="center"
+                    android:text="+"
+                    android:textSize="20sp"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/view_count"
+                    app:layout_constraintEnd_toEndOf="@id/view_count"
+                    app:layout_constraintTop_toTopOf="@id/view_count"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="1"
+                    android:textSize="20sp"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_minus"
+                    app:layout_constraintEnd_toEndOf="@id/view_count"
+                    app:layout_constraintStart_toStartOf="@id/view_count"
+                    app:layout_constraintTop_toBottomOf="@id/tv_plus" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/tv_minus"
+                    android:textAlignment="center"
+                    android:text="-"
+                    android:textSize="20sp"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/view_count"
+                    app:layout_constraintEnd_toEndOf="@id/view_count"
+                    app:layout_constraintBottom_toBottomOf="@id/view_count"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content"
+                    android:focusable="true" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</layout>
