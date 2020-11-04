@@ -40,7 +40,17 @@
         android:id="@+id/navigation_setting"
         android:name="com.example.market.ui.settings.SettingFragment"
         android:label="@string/title_Setting"
-        tools:layout="@layout/fragment_setting" />
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_navigation_setting_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_navigation_setting_to_signUpFragment2"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_navigation_setting_to_addressToDeliverFragment"
+            app:destination="@id/addressToDeliverFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.market.ui.LoginFragment"
@@ -73,9 +83,9 @@
         android:name="com.example.market.ui.Products.VegetablesFragment"
         android:label="@string/vegetables" >
 
-        <action
-            android:id="@+id/action_vegetablesFragment_to_productDetailsFragment2"
-            app:destination="@id/productDetailsFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_vegetablesFragment_to_productDetailsFragment2"-->
+<!--            app:destination="@id/productDetailsFragment" />-->
     </fragment>
     <fragment
         android:id="@+id/offersFragment"
@@ -95,4 +105,21 @@
         android:name="com.example.market.ui.Products.ProductDetailsFragment"
         android:label="fragment_product_details"
         tools:layout="@layout/fragment_product_details" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.market.ui.settings.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/addressToDeliverFragment"
+        android:name="com.example.market.ui.cart.AddressToDeliverFragment"
+        android:label="AddressToDeliverFragment" />
+    <fragment
+        android:id="@+id/cartItemsFragment"
+        android:name="com.example.market.ui.cart.CartItemsFragment"
+        android:label="CartItemsFragment" />
+    <fragment
+        android:id="@+id/confirmOrderFragment"
+        android:name="com.example.market.ui.cart.ConfirmOrderFragment"
+        android:label="ConfirmOrderFragment" />
 </navigation>

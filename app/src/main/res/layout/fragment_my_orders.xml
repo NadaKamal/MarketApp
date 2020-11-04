@@ -14,7 +14,10 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
+            tools:listitem="@layout/my_orders_item"
             android:id="@+id/recycler_my_orders"
+            app:reverseLayout="false"
+            app:stackFromEnd="false"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

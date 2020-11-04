@@ -25,13 +25,15 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyOrde
 
     List<OrderModel> OrderArrayList;
     private onClickItemListener itemListener;
-     OrderItemAdapter orderItemAdapter;
+    OrderItemAdapter orderItemAdapter;
     List<OrderItemsModel> orderItemsModelArrayList;
     Context context;
+    private int selected = -1;
 
-    public MyOrdersAdapter(List<OrderModel> OrderArrayList,  Context context,List<OrderItemsModel> orderItemsModelArrayList) {
+    public MyOrdersAdapter(List<OrderModel> OrderArrayList, Context context, List<OrderItemsModel> orderItemsModelArrayList) {
         this.OrderArrayList = OrderArrayList;
         this.orderItemsModelArrayList = orderItemsModelArrayList;
+        selected=0;
         this.context = context;
     }
 
@@ -40,40 +42,36 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyOrde
     @Override
     public MyOrdersViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return new MyOrdersViewHolder(MyOrdersItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false));
-
-
-        //  View view2 = LayoutInflater.from(parent.getContext()).inflate(R.layout.partial_item, parent, false);
-        //  MyOrdersViewHolder = new PartialMyOrdersViewHolder(view2, itemListener);
-
-
+        return new MyOrdersViewHolder(MyOrdersItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     private static final String TAG = "MyOrdersAdapter";
 
-    public void onBindViewHolder(@NonNull final MyOrdersViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyOrdersViewHolder holder, final int position) {
         OrderModel currentItem = OrderArrayList.get(position);
-
         holder.binding.tvOrderNumber.setText(currentItem.getOrderNum());
         holder.binding.tvDelivery.setText(currentItem.getDeliveryPrice());
         holder.binding.tvTotal.setText(currentItem.getTotalOrder());
         holder.binding.tvOrderStatus.setText(currentItem.getOrderStatus());
-        orderItemAdapter = new OrderItemAdapter(orderItemsModelArrayList,context);
+        orderItemAdapter = new OrderItemAdapter(orderItemsModelArrayList, context);
         holder.binding.recyclerOrderItems.setAdapter(orderItemAdapter);
-        holder.binding.ivExpandItem.setOnClickListener(new View.OnClickListener() {
+
+
+        if (position == selected) {
+            holder.binding.ivExpandItem.setImageResource(R.drawable.ic_baseline_arrow_drop_up_24);
+            holder.binding.expandedLayout.setVisibility(View.VISIBLE);
+        } else {
+            holder.binding.expandedLayout.setVisibility(View.GONE);
+            holder.binding.ivExpandItem.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
+        }
+
+        holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(holder.binding.expandedLayout.getVisibility() == View.GONE)
-                {
-                    holder.binding.ivExpandItem.setImageResource(R.drawable.ic_baseline_arrow_drop_up_24);
-                    holder.binding.expandedLayout.setVisibility(View.VISIBLE);
+                if (holder.binding.expandedLayout.getVisibility() == View.GONE) {
+                    selected = position;
+                    notifyDataSetChanged();
                 }
-                else if(holder.binding.expandedLayout.getVisibility() == View.VISIBLE)
-                {
-                    holder.binding.expandedLayout.setVisibility(View.GONE);
-                    holder.binding.ivExpandItem.setImageResource(R.drawable.ic_baseline_arrow_drop_down_24);
-                }
-
             }
         });
         // CategoriesResponse currentItem = MessagesArrayList.get(position);

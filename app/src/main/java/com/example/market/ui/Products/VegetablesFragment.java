@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,13 @@ public class VegetablesFragment extends Fragment implements  ProductsAdapter.onC
         return fragment;
     }
 
+    private static final String TAG = "VegetablesFragment";
+    public static Fragment newInstance(int position) {
+        VegetablesFragment fragment = new VegetablesFragment();
+        Log.d(TAG, "newInstance: current item "+position);
+        return fragment;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,14 +63,9 @@ public class VegetablesFragment extends Fragment implements  ProductsAdapter.onC
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         products.clear();
-        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
-        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
-        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
-        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
-        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
-        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
-        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
-        products.add(new ProductsModel("product", "", "County", "20kg", "30 EGP"));
+        products.add(new ProductsModel("product", "", "Country", "20kg", "30 EGP"));
+        products.add(new ProductsModel("product", "", "Country", "20kg", "30 EGP"));
+        products.add(new ProductsModel("product", "", "Country", "20kg", "30 EGP"));
         adapter = new ProductsAdapter(products, this, getActivity());
         binding.recyclerVegetables.setAdapter(adapter);
     }

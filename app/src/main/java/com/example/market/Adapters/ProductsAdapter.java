@@ -51,10 +51,10 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
         holder.binding.priceTxt.setText(currentItem.getProduct_price());
         holder.binding.weightTxt.setText(currentItem.getProduct_weight());
 
-        holder.binding.tvProductName.setOnClickListener(new View.OnClickListener() {
+        holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_vegetablesFragment_to_productDetailsFragment2);
+                Navigation.findNavController(v).navigate(R.id.productDetailsFragment);
             }
         });
         amount = Integer.parseInt(holder.binding.tvItemCount.getText().toString());

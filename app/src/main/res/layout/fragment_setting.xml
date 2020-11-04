@@ -1,147 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.settings.SettingFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.settings.SettingFragment">
 
 
- <androidx.constraintlayout.widget.ConstraintLayout
-     android:layout_width="match_parent"
-android:background="@color/white"
-     android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
 
 
-     <TextView
-         android:layout_margin="30dp"
-         android:layout_width="wrap_content"
-         android:id="@+id/tv_edit_profile"
-         android:textColor="@color/colorPrimaryDark"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent"
-         android:text="@string/edit_profile"
-         android:textSize="18sp"
-         android:layout_height="wrap_content"/>
+            <TextView
 
-     <View
-         android:id="@+id/divider_view"
-         android:layout_width="match_parent"
-         app:layout_constraintTop_toBottomOf="@id/tv_edit_profile"
-        android:layout_marginStart="20dp"
-         android:layout_marginEnd="20dp"
-         android:layout_marginTop="20dp"
-         android:alpha=".4"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         android:background="#EEEEEE"
-         android:layout_height="1dp"/>
+                android:layout_width="match_parent"
+                android:id="@+id/tv_edit_profile"
+                android:layout_marginStart="20dp"
+android:layout_marginTop="10dp"
+                android:textAlignment="viewStart"
+                app:layout_constraintBottom_toTopOf="@id/divider_view"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/edit_profile"
+                android:padding="12dp"
+                android:textSize="18sp"
 
-     <TextView
-         android:id="@+id/tv_my_addresses"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="20dp"
-         android:text="@string/my_addresses"
-         android:textColor="@color/colorPrimaryDark"
-         android:textSize="18sp"
-         app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
-         app:layout_constraintTop_toBottomOf="@id/divider_view" />
-     <View
-         android:id="@+id/divider_view2"
-         android:layout_width="match_parent"
-         app:layout_constraintTop_toBottomOf="@id/tv_my_addresses"
-         android:alpha=".4"
+                android:layout_height="wrap_content" />
 
-         android:layout_marginTop="30dp"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         android:background="#EEEEEE"
-         android:layout_height="20dp"/>
+            <View
+                android:id="@+id/divider_view"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_edit_profile"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:alpha=".4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="#EEEEEE"
+                android:layout_height="1dp" />
 
-     <TextView
-         android:id="@+id/tv_notification"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="30dp"
-         android:text="@string/notification"
-         android:textColor="@color/colorPrimaryDark"
-         android:textSize="18sp"
-         app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
-         app:layout_constraintTop_toBottomOf="@id/divider_view2" />
-     <View
-         android:id="@+id/divider_view3"
-         android:layout_width="match_parent"
-         app:layout_constraintTop_toBottomOf="@id/tv_notification"
-         android:alpha=".4"
-         android:layout_marginStart="20dp"
-         android:layout_marginEnd="20dp"
-         android:layout_marginTop="20dp"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         android:background="#EEEEEE"
-         android:layout_height="1dp"/>
+            <TextView
+                android:id="@+id/tv_my_addresses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:layout_marginStart="20dp"
 
-     <TextView
-         android:id="@+id/tv_lang"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="30dp"
-         android:text="@string/lang"
-         android:textColor="@color/colorPrimaryDark"
-         android:textSize="18sp"
-         app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
-         app:layout_constraintTop_toBottomOf="@id/divider_view3" />
+                android:padding="12dp"
+                android:text="@string/my_addresses"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
+                app:layout_constraintTop_toBottomOf="@id/divider_view" />
 
-     <View
-         android:id="@+id/divider_view4"
-         android:layout_width="match_parent"
-         app:layout_constraintTop_toBottomOf="@id/tv_lang"
-         android:alpha=".4"
+            <View
+                android:id="@+id/divider_view2"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_addresses"
+                android:alpha=".4"
 
-         android:layout_marginTop="30dp"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         android:background="#EEEEEE"
-         android:layout_height="20dp"/>
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="#EEEEEE"
+                android:layout_height="20dp" />
 
-     <TextView
-         android:id="@+id/tv_about"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="30dp"
-         android:text="@string/about"
-         android:textColor="@color/colorPrimaryDark"
-         android:textSize="18sp"
-         app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
-         app:layout_constraintTop_toBottomOf="@id/divider_view4" />
-     <View
-         android:id="@+id/divider_view5"
-         android:layout_width="match_parent"
-         app:layout_constraintTop_toBottomOf="@id/tv_about"
-         android:alpha=".4"
-         android:layout_marginStart="20dp"
-         android:layout_marginEnd="20dp"
-         android:layout_marginTop="20dp"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
-         android:background="#EEEEEE"
-         android:layout_height="1dp"/>
-     <TextView
-         android:id="@+id/tv_privacy_policy"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="30dp"
-         android:text="@string/privacy_policy"
-         android:textColor="@color/colorPrimaryDark"
-         android:textSize="18sp"
-         app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
-         app:layout_constraintTop_toBottomOf="@id/divider_view5" />
+            <TextView
+                android:id="@+id/tv_notification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                app:layout_constraintEnd_toStartOf="@id/notification_switch"
+                android:text="@string/notification"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
+                app:layout_constraintTop_toBottomOf="@id/divider_view2" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_margin="30dp"
+                android:shadowColor="@color/colorPrimaryDark"
+                app:layout_constraintTop_toTopOf="@id/tv_notification"
+                app:layout_constraintBottom_toBottomOf="@id/tv_notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/divider_view3"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_notification"
+                android:alpha=".4"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="#EEEEEE"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/tv_lang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="@string/lang"
+                android:layout_marginStart="20dp"
+
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_view3" />
+
+            <View
+                android:id="@+id/divider_view4"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_lang"
+                android:alpha=".4"
+
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="#EEEEEE"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/about"
+                android:layout_marginStart="20dp"
+
+                android:padding="12dp"
+                android:textAlignment="viewStart"
+
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
+                app:layout_constraintTop_toBottomOf="@id/divider_view4" />
+
+            <View
+                android:id="@+id/divider_view5"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_about"
+                android:alpha=".4"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="#EEEEEE"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/tv_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/privacy_policy"
+                android:textAlignment="viewStart"
+android:padding="12dp"
+                android:layout_marginStart="20dp"
+
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
+                app:layout_constraintTop_toBottomOf="@id/divider_view5" />
 
 
-
-
- </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

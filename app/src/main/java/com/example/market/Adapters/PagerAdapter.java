@@ -24,15 +24,15 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
        Fragment fragment = null;
         if (position == 0) fragment = CategoryFragment.newInstance();
-        if (position == 1) fragment = VegetablesFragment.newInstance();
-        if (position == 2) fragment = VegetablesFragment.newInstance();
-        if (position == 3) fragment = VegetablesFragment.newInstance();
-        if (position == 4) fragment = VegetablesFragment.newInstance();
-        if (position == 5) fragment = VegetablesFragment.newInstance();
-        if (position == 6) fragment = VegetablesFragment.newInstance();
-        if (position == 7) fragment = VegetablesFragment.newInstance();
-        if (position == 8) fragment = VegetablesFragment.newInstance();
-        if (position == 9) fragment = VegetablesFragment.newInstance();
+        if (position == 1) fragment = VegetablesFragment.newInstance(position);
+        if (position == 2) fragment = VegetablesFragment.newInstance(position);
+        if (position == 3) fragment = VegetablesFragment.newInstance(position);
+        if (position == 4) fragment = VegetablesFragment.newInstance(position);
+        if (position == 5) fragment = VegetablesFragment.newInstance(position);
+        if (position == 6) fragment = VegetablesFragment.newInstance(position);
+        if (position == 7) fragment = VegetablesFragment.newInstance(position);
+        if (position == 8) fragment = VegetablesFragment.newInstance(position);
+        if (position == 9) fragment = VegetablesFragment.newInstance(position);
         return fragment;
 
     }

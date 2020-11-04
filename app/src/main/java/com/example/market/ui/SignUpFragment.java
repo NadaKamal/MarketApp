@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.market.R;
 import com.example.market.databinding.FragmentSignUpBinding;
@@ -52,6 +53,13 @@ FragmentSignUpBinding binding;
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        boolean isFromSetting;
+        if(getArguments() != null) {
+            isFromSetting = getArguments().getBoolean("isFromSetting");
+            if (isFromSetting) {
+                binding.btnNext.setVisibility(View.GONE);
+            }
+        }
         binding.btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

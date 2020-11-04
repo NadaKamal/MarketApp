@@ -65,12 +65,12 @@ navController.addOnDestinationChangedListener(new NavController.OnDestinationCha
             binding.toolBar.toolbarTitle.setText(destination.getLabel());
         }
 
-        else if (destination.getId() == R.id.signUpFragment)
-        {
-            binding.toolBar.toolbarTitle.setVisibility(View.VISIBLE);
-            binding.toolBar.toolbarImg.setVisibility(View.GONE);
-            binding.toolBar.toolbarTitle.setText(destination.getLabel());
-        }
+//        else if (destination.getId() == R.id.signUpFragment)
+//        {
+//            binding.toolBar.toolbarTitle.setVisibility(View.VISIBLE);
+//            binding.toolBar.toolbarImg.setVisibility(View.GONE);
+//            binding.toolBar.toolbarTitle.setText(destination.getLabel());
+//        }
         else if (destination.getId() == R.id.loginFragment)
         {
             binding.toolBar.toolbarTitle.setVisibility(View.VISIBLE);

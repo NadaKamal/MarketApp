@@ -57,6 +57,16 @@ public class AddressToDeliverFragment extends Fragment implements AddressAdapter
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
+        boolean isFromSetting;
+        if(getArguments() != null) {
+            isFromSetting = getArguments().getBoolean("isFromSetting");
+            if (isFromSetting) {
+                binding.btnNext.setVisibility(View.GONE);
+                binding.btnBack.setVisibility(View.GONE);
+            }
+        }
         Navigation.findNavController(view);
         addressModelArrayList.add(new AddressModel(getActivity().getResources().getString(R.string.address_to_deliver),
                 getActivity().getResources().getString(R.string.governorate)));

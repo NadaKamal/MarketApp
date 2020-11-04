@@ -18,6 +18,7 @@ import com.example.market.R;
 import com.example.market.databinding.FragmentMyOrdersBinding;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class OrdersFragment extends Fragment {
 
@@ -52,9 +53,49 @@ public class OrdersFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         orderItemsModelArrayList.add(new OrderItemsModel("Item1", "20GM", "20EGP"));
         orderItemsModelArrayList.add(new OrderItemsModel("Item1", "20GM", "20EGP"));
 
+
+
+        orderModelArrayList.add(new OrderModel("Order #2000",
+                "200EGP", "5EGP",
+                orderItemsModelArrayList,
+                "Delivered"));
+
+        orderModelArrayList.add(new OrderModel("Order #2200",
+                "200EGP", "5EGP",
+                orderItemsModelArrayList,
+                "Delivered"));
+        orderModelArrayList.add(new OrderModel("Order #2000",
+                "200EGP", "5EGP",
+                orderItemsModelArrayList,
+                "Delivered"));
+
+        orderModelArrayList.add(new OrderModel("Order #2200",
+                "200EGP", "5EGP",
+                orderItemsModelArrayList,
+                "Delivered"));
+        orderModelArrayList.add(new OrderModel("Order #2000",
+                "200EGP", "5EGP",
+                orderItemsModelArrayList,
+                "Delivered"));
+
+        orderModelArrayList.add(new OrderModel("Order #2200",
+                "200EGP", "5EGP",
+                orderItemsModelArrayList,
+                "Delivered"));
+
+        orderModelArrayList.add(new OrderModel("Order #2000",
+                "200EGP", "5EGP",
+                orderItemsModelArrayList,
+                "Delivered"));
+
+        orderModelArrayList.add(new OrderModel("Order #2200",
+                "200EGP", "5EGP",
+                orderItemsModelArrayList,
+                "Delivered"));
 
         orderModelArrayList.add(new OrderModel("Order #2000",
                 "200EGP", "5EGP",

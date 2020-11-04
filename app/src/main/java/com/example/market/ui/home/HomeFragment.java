@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        PagerAdapter adapter = new PagerAdapter(getActivity().getSupportFragmentManager());
+        PagerAdapter adapter = new PagerAdapter(getChildFragmentManager());
         binding.tabLayout.setupWithViewPager(binding.viewPager);
         binding.tabLayout.setScrollPosition(3, .3f,true);
         binding.viewPager.setAdapter(adapter);

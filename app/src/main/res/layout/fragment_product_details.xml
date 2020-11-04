@@ -7,10 +7,15 @@
 
   </data>
 
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+    android:fillViewport="true">
+
   <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:padding="20dp"
+
       tools:context=".ui.Products.ProductDetailsFragment">
 
     <com.github.siyamed.shapeimageview.RoundedImageView
@@ -21,9 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent=".9"
         app:siBorderWidth="7dp"
-
         app:siBorderColor="@color/white"
         app:layout_constraintHeight_percent=".4"
         android:src="@drawable/vegetables"
@@ -33,6 +36,8 @@
         android:layout_width="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/product_name"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:textSize="20sp"
@@ -48,22 +53,27 @@
         app:layout_constraintTop_toBottomOf="@id/tv_product_name"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:textStyle="bold"
         android:alpha=".5"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:layout_width="0dp"
         android:id="@+id/tv_product_overview"
-        app:layout_constraintTop_toBottomOf="@id/tv_product_price"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:alpha=".6"
-        android:textAlignment="viewStart"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="10dp"
         android:text="Product Overview  \n Product Overview \n Product Overview \n Product Overview"
-        android:layout_height="wrap_content" />
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@id/iv_product_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_price" />
 
     <TextView
         android:id="@+id/tv_item_count"
@@ -100,5 +110,43 @@
         app:layout_constraintStart_toEndOf="@id/tv_item_count"
         app:layout_constraintTop_toTopOf="@id/tv_item_count" />
 
+    <LinearLayout
+        android:id="@+id/btn_add_to_cart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/btn_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="4dp"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_count">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:layout_gravity="center_vertical"
+          android:text="@string/add_to_cart"
+          android:textColor="@color/white"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="@id/tv_category_name"
+          app:layout_constraintTop_toBottomOf="@id/tv_category_name" />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="6dp"
+          android:src="@drawable/ic_white_cart" />
+    </LinearLayout>
+
   </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </ScrollView>
+
 </layout>

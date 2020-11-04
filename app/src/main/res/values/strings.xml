@@ -74,5 +74,8 @@
     <string name="privacy_policy">سياسة الخصوصية</string>
     <string name="order">الطلب 230#</string>
     <string name="delivery">التوصيل:</string>
+    <string name="choose_lang">اختر اللغة</string>
+    <string name="arabic">العربية</string>
+    <string name="english">English</string>
 
 </resources>
