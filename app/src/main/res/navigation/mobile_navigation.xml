@@ -50,6 +50,12 @@
         <action
             android:id="@+id/action_navigation_setting_to_addressToDeliverFragment"
             app:destination="@id/addressToDeliverFragment" />
+        <action
+            android:id="@+id/action_navigation_setting_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+        <action
+            android:id="@+id/action_navigation_setting_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -113,7 +119,11 @@
     <fragment
         android:id="@+id/addressToDeliverFragment"
         android:name="com.example.market.ui.cart.AddressToDeliverFragment"
-        android:label="AddressToDeliverFragment" />
+        android:label="AddressToDeliverFragment" >
+        <action
+            android:id="@+id/action_addressToDeliverFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cartItemsFragment"
         android:name="com.example.market.ui.cart.CartItemsFragment"
@@ -122,4 +132,12 @@
         android:id="@+id/confirmOrderFragment"
         android:name="com.example.market.ui.cart.ConfirmOrderFragment"
         android:label="ConfirmOrderFragment" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.example.market.ui.aboutAppFragment"
+        android:label="aboutAppFragment" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.example.market.ui.PrivacyPolicyFragment"
+        android:label="PrivacyPolicyFragment" />
 </navigation>

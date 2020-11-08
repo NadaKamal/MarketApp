@@ -85,6 +85,18 @@ public class AddressToDeliverFragment extends Fragment implements AddressAdapter
 
             }
         });
+
+        binding.tvAddNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putBoolean("isFromSetting", true);
+                Navigation
+                        .createNavigateOnClickListener(R.id.action_addressToDeliverFragment_to_addressFragment,bundle)
+                        .onClick(v);
+            }
+        });
+
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

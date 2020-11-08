@@ -25,7 +25,9 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.AddressV
     private onClickItemListener itemListener;
     Context context;
 
-    public AddressAdapter(List<AddressModel> Addresses, onClickItemListener listener, Context context) {
+    public AddressAdapter(List<AddressModel> Addresses,
+                          onClickItemListener listener,
+                          Context context) {
         this.Addresses = Addresses;
         this.itemListener = listener;
         this.context = context;

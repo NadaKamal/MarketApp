@@ -72,23 +72,16 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyOrde
                     selected = position;
                     notifyDataSetChanged();
                 }
+
             }
         });
-        // CategoriesResponse currentItem = MessagesArrayList.get(position);
-//        Log.d(TAG, "onBindMyOrdersViewHolder: "+MessagesArrayList.get(position).getName());
-//        holder.itemName.setText(MessagesArrayList.get(position).getName());
-//
-//        Glide.with(context).load("http://app.al-jaddaf.com/public/uploads/"+ MessagesArrayList.get(position).getImage()).into(holder.itemImage);
     }
 
 
     class MyOrdersViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         onClickItemListener listener;
-
         MyOrdersItemBinding binding;
-
-
         public MyOrdersViewHolder(MyOrdersItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
@@ -97,8 +90,6 @@ public class MyOrdersAdapter extends RecyclerView.Adapter<MyOrdersAdapter.MyOrde
 
         @Override
         public void onClick(View v) {
-//            itemListener.onClickItemListener(getAdapterPosition(),MessagesArrayList.get(getAdapterPosition()).getId());
-
         }
     }
 

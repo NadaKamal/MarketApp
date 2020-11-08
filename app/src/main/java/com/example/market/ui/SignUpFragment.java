@@ -58,6 +58,7 @@ FragmentSignUpBinding binding;
             isFromSetting = getArguments().getBoolean("isFromSetting");
             if (isFromSetting) {
                 binding.btnNext.setVisibility(View.GONE);
+                binding.tvMandatoryItems.setVisibility(View.GONE);
             }
         }
         binding.btnNext.setOnClickListener(new View.OnClickListener() {

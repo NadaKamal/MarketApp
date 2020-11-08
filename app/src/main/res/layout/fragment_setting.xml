@@ -121,7 +121,6 @@ android:layout_marginTop="10dp"
                 android:padding="12dp"
                 android:text="@string/lang"
                 android:layout_marginStart="20dp"
-
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
@@ -133,7 +132,6 @@ android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_lang"
                 android:alpha=".4"
-
                 android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -147,14 +145,14 @@ android:layout_marginTop="10dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/about"
                 android:layout_marginStart="20dp"
-
+                android:clickable="true"
                 android:padding="12dp"
                 android:textAlignment="viewStart"
-
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
-                app:layout_constraintTop_toBottomOf="@id/divider_view4" />
+                app:layout_constraintTop_toBottomOf="@id/divider_view4"
+                android:focusable="true" />
 
             <View
                 android:id="@+id/divider_view5"
@@ -176,13 +174,16 @@ android:layout_marginTop="10dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/privacy_policy"
                 android:textAlignment="viewStart"
-android:padding="12dp"
+                android:padding="12dp"
+                android:clickable="true"
+
                 android:layout_marginStart="20dp"
 
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_edit_profile"
-                app:layout_constraintTop_toBottomOf="@id/divider_view5" />
+                app:layout_constraintTop_toBottomOf="@id/divider_view5"
+                android:focusable="true" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

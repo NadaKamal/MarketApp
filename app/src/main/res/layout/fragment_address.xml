@@ -1,161 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:padding="20dp"
-    android:fillViewport="true"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.AddressFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <EditText
-        android:id="@+id/et_governorate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:alpha=".5"
-        android:padding="5dp"
-        android:background="@drawable/raduis_border"
-        android:hint="@string/governorate"
-        android:textColorHint="@color/colorPrimary"
-        app:layout_constraintEnd_toStartOf="@+id/btn_location"
-        app:layout_constraintHorizontal_bias="0.8"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="20dp"
+        android:fillViewport="true"
+        android:layout_height="match_parent"
+        tools:context=".ui.AddressFragment">
 
-    <LinearLayout
-        android:id="@+id/btn_location"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:padding="11dp"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-    app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/et_governorate"
-        app:layout_constraintTop_toTopOf="@+id/et_governorate">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_outline_location_on_24" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/et_governorate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:alpha=".5"
+                android:padding="5dp"
+                android:background="@drawable/raduis_border"
+                android:hint="@string/governorate"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toStartOf="@+id/btn_location"
+                app:layout_constraintHorizontal_bias="0.8"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:layout_width="0dp"
-        android:id="@+id/et_region"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_governorate"
-        android:layout_marginTop="20dp"
-      android:padding="5dp"
-        android:background="@drawable/raduis_border"
-        android:alpha=".5"
-        android:textColorHint="@color/colorPrimary"
-        android:hint="@string/reigon"
-        android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/btn_location"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:padding="11dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/et_governorate"
+                app:layout_constraintTop_toTopOf="@+id/et_governorate">
 
-    <EditText
-        android:layout_width="0dp"
-        android:id="@+id/et_neighborhood"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_region"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:background="@drawable/raduis_border"
-        android:alpha=".5"
-        android:textColorHint="@color/colorPrimary"
-        android:hint="@string/neighborhood"
-        android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_outline_location_on_24" />
+            </LinearLayout>
 
-    <EditText
-        android:layout_width="0dp"
-        android:id="@+id/et_street"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_neighborhood"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:background="@drawable/raduis_border"
-        android:alpha=".5"
-        android:textColorHint="@color/colorPrimary"
-        android:hint="@string/street"
-        android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/et_region"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_governorate"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:background="@drawable/raduis_border"
+                android:alpha=".5"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="@string/reigon"
+                android:layout_height="wrap_content" />
 
-    <EditText
-        android:layout_width="0dp"
-        android:id="@+id/et_building_number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_street"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:background="@drawable/raduis_border"
-        android:alpha=".5"
-        android:textColorHint="@color/colorPrimary"
-        android:hint="@string/building_num"
-        android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/et_neighborhood"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_region"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:background="@drawable/raduis_border"
+                android:alpha=".5"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="@string/neighborhood"
+                android:layout_height="wrap_content" />
 
-    <EditText
-        android:layout_width="0dp"
-        android:id="@+id/et_floor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_building_number"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:background="@drawable/raduis_border"
-        android:alpha=".5"
-        android:textColorHint="@color/colorPrimary"
-        android:hint="@string/floor"
-        android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/et_street"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_neighborhood"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:background="@drawable/raduis_border"
+                android:alpha=".5"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="@string/street"
+                android:layout_height="wrap_content" />
 
-    <EditText
-        android:layout_width="0dp"
-        android:id="@+id/et_flat_number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_floor"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:background="@drawable/raduis_border"
-        android:alpha=".5"
-        android:textColorHint="@color/colorPrimary"
-        android:hint="@string/flat_number"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:layout_width="0dp"
-        android:id="@+id/et_notes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_flat_number"
-        android:layout_marginTop="20dp"
-      android:paddingStart="5dp"
-        android:background="@drawable/raduis_border"
-        android:alpha=".5"
-        android:maxLines="2"
-        android:lines="2"
-        android:textColorHint="@color/colorPrimary"
-        android:hint="ملاحظات"
-        android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/et_building_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_street"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:background="@drawable/raduis_border"
+                android:alpha=".5"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="@string/building_num"
+                android:layout_height="wrap_content" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:textColor="@color/colorPrimary"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintTop_toBottomOf="@id/et_notes"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/cardview_bg" />
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/et_floor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_building_number"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:background="@drawable/raduis_border"
+                android:alpha=".5"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="@string/floor"
+                android:layout_height="wrap_content" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/et_flat_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_floor"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:background="@drawable/raduis_border"
+                android:alpha=".5"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="@string/flat_number"
+                android:layout_height="wrap_content" />
 
-</ScrollView>
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/et_notes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_flat_number"
+                android:layout_marginTop="20dp"
+                android:paddingStart="5dp"
+                android:background="@drawable/raduis_border"
+                android:alpha=".5"
+                android:maxLines="2"
+                android:lines="2"
+                android:textColorHint="@color/colorPrimary"
+                android:hint="ملاحظات"
+                android:layout_height="wrap_content" />
+
+            <Button
+
+                android:id="@+id/btn_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up"
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintTop_toBottomOf="@id/et_notes"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/cardview_bg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

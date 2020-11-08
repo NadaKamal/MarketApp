@@ -80,8 +80,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
 
     class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView msgContent, msgLink, seenNum, time;
-        onClickItemListener listener;
+
          CartItemBinding binding;
 
         public CartViewHolder(CartItemBinding binding) {
@@ -92,8 +91,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
         @Override
         public void onClick(View v) {
-//            itemListener.onClickItemListener(getAdapterPosition(),MessagesArrayList.get(getAdapterPosition()).getId());
-
         }
     }
 

@@ -58,14 +58,12 @@ public class CardsAdapter extends PagerAdapter {
                 Navigation.findNavController(v).navigate(R.id.action_navigation_home_to_mainActivity);
             }
         });
-      //  binding.ivCategoryImg.setImageURI(categoriesModel.get(position).getCategoryImg());
         return view;
 
     }
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        //super.destroyItem(container, position, object);
         container.removeView((View) object);
     }
 }

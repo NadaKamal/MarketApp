@@ -7,7 +7,11 @@ public class ProductsModel {
     private String product_weight;
     private String product_price;
 
-    public ProductsModel(String product_name, String product_image, String product_origin, String product_weight, String product_price) {
+    public ProductsModel(String product_name,
+                         String product_image,
+                         String product_origin,
+                         String product_weight,
+                         String product_price) {
         this.product_name = product_name;
         this.product_image = product_image;
         this.product_origin = product_origin;

@@ -11,56 +11,48 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.market.R;
-import com.example.market.databinding.FragmentAddressBinding;
+import com.example.market.databinding.FragmentPrivacyPolicyBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AddressFragment#newInstance} factory method to
+ * Use the {@link PrivacyPolicyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AddressFragment extends Fragment {
+public class PrivacyPolicyFragment extends Fragment {
 
-    FragmentAddressBinding binding;
-
-
-    public AddressFragment() {
+FragmentPrivacyPolicyBinding binding;
+    public PrivacyPolicyFragment() {
         // Required empty public constructor
     }
 
 
-    public static AddressFragment newInstance() {
-        AddressFragment fragment = new AddressFragment();
+    public static PrivacyPolicyFragment newInstance(String param1, String param2) {
+        PrivacyPolicyFragment fragment = new PrivacyPolicyFragment();
+
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+binding = FragmentPrivacyPolicyBinding.inflate(inflater,container,false);
+View view = binding.getRoot();
+return view;
 
-        binding = FragmentAddressBinding.inflate(inflater, container, false);
-        View view = binding.getRoot();
-        return view;
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        boolean isFromSetting;
-        if (getArguments() != null) {
-            isFromSetting = getArguments().getBoolean("isFromSetting");
-            if (isFromSetting) {
-                binding.btnSignUp.setText(getActivity().getResources().getString(R.string.add_address));
-            }
-            else
-            {
-                binding.btnSignUp.setText(getActivity().getResources().getString(R.string.sign_up));
-            }
-        }
+        binding.privacyPolicyWebView.getSettings().setJavaScriptEnabled(true);
+        binding.privacyPolicyWebView.loadUrl("https://www.google.com");
     }
 }

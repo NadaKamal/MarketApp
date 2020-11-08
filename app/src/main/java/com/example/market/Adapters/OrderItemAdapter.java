@@ -37,13 +37,9 @@ public class OrderItemAdapter extends RecyclerView.Adapter<OrderItemAdapter.Orde
     @Override
     public OrderItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-       return new OrderItemViewHolder(OrderItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false));
-
-
-        //  View view2 = LayoutInflater.from(parent.getContext()).inflate(R.layout.partial_item, parent, false);
-        //  OrderItemViewHolder = new PartialOrderItemViewHolder(view2, itemListener);
-
-
+       return new OrderItemViewHolder(OrderItemBinding.inflate(LayoutInflater.from(parent.getContext())
+               ,parent,
+               false));
     }
 
     private static final String TAG = "OrderItemAdapter";
@@ -54,11 +50,6 @@ public class OrderItemAdapter extends RecyclerView.Adapter<OrderItemAdapter.Orde
         holder.binding.tvProductName.setText(currentItem.getProductName());
         holder.binding.tvItemCount.setText(currentItem.getProductCount());
         holder.binding.tvItemPrice.setText(currentItem.getProductPrice());
-        // CategoriesResponse currentItem = MessagesArrayList.get(position);
-//        Log.d(TAG, "onBindOrderItemViewHolder: "+MessagesArrayList.get(position).getName());
-//        holder.itemName.setText(MessagesArrayList.get(position).getName());
-//
-//        Glide.with(context).load("http://app.al-jaddaf.com/public/uploads/"+ MessagesArrayList.get(position).getImage()).into(holder.itemImage);
     }
 
 

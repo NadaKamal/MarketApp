@@ -34,7 +34,6 @@ public class PagerAdapter extends FragmentPagerAdapter {
         if (position == 8) fragment = VegetablesFragment.newInstance(position);
         if (position == 9) fragment = VegetablesFragment.newInstance(position);
         return fragment;
-
     }
 
     @Override

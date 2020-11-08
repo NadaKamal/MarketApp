@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Market</string>
+	<string name="title_activity_home">Market</string>
+	<string name="title_home">الرئيسية</string>
+	<string name="title_Cart">سلة المشتريات</string>
+	<string name="title_my_orders">طلباتي</string>
+	<string name="title_Setting">إعدادات</string>
+	<string name="origin">بلد المنشأ:</string>
+	<string name="weight">الوزن:</string>
+	<string name="price">السعر:</string>
+	<string name="offers">العروض</string>
+	<string name="fruits">الفواكه</string>
+	<string name="leafy"> الورقيات </string>
+
+
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="have_account">لديك حساب؟</string>
+	<string name="email">  *البريد الالكتروني / رقم الهاتف</string>
+	<string name="password"> كلمة السر*</string>
+	<string name="login">تسجيل الدخول</string>
+	<string name="forgotPassword">نسيت كلمة السر</string>
+	<string name="create_account">انشاء حساب</string>
+	<string name="continueWithGoogle">إستمرار عبر جوجل</string>
+	<string name="continue_with_facebook">استمرار عبر فيسبوك</string>
+	<string name="first_name">* الاسم الاول</string>
+	<string name="last_name"> * اسم العائلة</string>
+	<string name="Email">البريد الالكتروني</string>
+	<string name="date_of_birth">تاريخ الميلاد</string>
+	<string name="phone_num"> رقم الهاتف *</string>
+	<string name="female">انثى</string>
+	<string name="male">ذكر</string>
+	<string name="mandatory_items">* يجب ادخال المعلومات في هذه الخانات</string>
+	<string name="next">التالي</string>
+	<string name="new_account">حساب جديد</string>
+	<string name="vegetables">الخضروات</string>
+	<string name="governorate">المحافظة</string>
+	<string name="reigon">المنطقة</string>
+	<string name="neighborhood">الحي</string>
+	<string name="street">الشارع</string>
+	<string name="building_num">رقم المبنى</string>
+	<string name="floor">الطابق</string>
+	<string name="flat_number">رقم الشقة</string>
+	<string name="sign_up">تسجيل</string>
+	<string name="forgot_pass">نسيت كلمة السر</string>
+	<string name="confirm">تأكيد</string>
+	<string name="cancel">الغاء</string>
+	<string name="done">تم</string>
+	<string name="count_item">0</string>
+	<string name="add_to_cart">أضف الى السلة</string>
+	<string name="country">البلد</string>
+	<string name="product_name">اسم المنتج</string>
+	<string name="view_all">عرض الكل</string>
+	<string name="total_order">حاصل المجموع:</string>
+	<string name="delivery_charge">رسوم التوصيل</string>
+	<string name="_20_50">20.50</string>
+	<string name="total">المجموع :</string>
+	<string name="general_notes">ملاحظات عامة:</string>
+	<string name="notes">ملاحظات</string>
+	<string name="continue_shopping">مواصلة التسوق</string>
+	<string name="address_to_deliver">عنوان التوصيل</string>
+	<string name="add_new">إضافة جديد</string>
+	<string name="back">رجوع</string>
+	<string name="promo">كود الخصم</string>
+	<string name="confrim">تفعيل الكود</string>
+	<string name="confirm_order">اتمام الطلب</string>
+	<string name="edit">تعديل</string>
+	<string name="search">البحث</string>
+	<string name="edit_profile">تعديل الحساب</string>
+	<string name="my_addresses">عناويني</string>
+	<string name="notification">الاشعارات</string>
+	<string name="lang">اللغة</string>
+	<string name="about">حول</string>
+	<string name="privacy_policy">سياسة الخصوصية</string>
+	<string name="order">الطلب 230#</string>
+	<string name="delivery">التوصيل:</string>
+	<string name="choose_lang">اختر اللغة</string>
+	<string name="arabic">العربية</string>
+	<string name="english">English</string>
+	<string name="title_Account">حسابي</string>
+	<string name="add_address"> اضف عنوان </string>
+
+</resources>

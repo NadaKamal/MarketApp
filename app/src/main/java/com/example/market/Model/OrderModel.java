@@ -10,7 +10,9 @@ public class OrderModel {
    private ArrayList<OrderItemsModel> orderItems;
    private String orderStatus;
 
-    public OrderModel(String orderNum, String totalOrder, String deliveryPrice, ArrayList<OrderItemsModel> orderItems, String orderStatus) {
+    public OrderModel(String orderNum, String totalOrder, String deliveryPrice,
+                      ArrayList<OrderItemsModel> orderItems,
+                      String orderStatus) {
         this.orderNum = orderNum;
         this.totalOrder = totalOrder;
         this.deliveryPrice = deliveryPrice;

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.Adapter;
 
 import com.bartoszlipinski.flippablestackview.StackPageTransformer;
-import com.example.market.Adapters.ImagesAdapter;
 import com.example.market.Adapters.PagerAdapter;
 import com.example.market.Model.CategoriesModel;
 import com.example.market.databinding.ActivityMainBinding;
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
    ArrayList<CategoriesModel> models = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        LocaleHelper.onAttach(this);
         super.onCreate(savedInstanceState);
        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setSupportActionBar(binding.toolBar.toolBar1);

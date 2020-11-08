@@ -64,7 +64,6 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
                 holder.binding.btnAddToCart.setVisibility(View.GONE);
                 holder.binding.tvItemCount.setVisibility(View.VISIBLE);
                 holder.binding.btnAdd.setVisibility(View.VISIBLE);
-               // holder.binding.btnDn.setVisibility(View.VISIBLE);
                 holder.binding.btnRemove.setVisibility(View.VISIBLE);
             }
         });
@@ -95,7 +94,6 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
             super(binding.getRoot());
             this.binding = binding;
         }
-
 
         @Override
         public void onClick(View v) { }
